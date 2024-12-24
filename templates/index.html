@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="jumbotron">
+    <div class="container">
+        <h1>{{config.botname}}</h1>
+        <h2>{{config.subtitle}}</h2>
+       
+    </div>
+</div>
+<div class="container">
+    <div id="responses" class="alert alert-success" role="alert">
+       {{config.message}}
+    </div>
+
+    <form method="POST" enctype=multipart/form-data>
+    <div class="form-group">
+        <label for="input">Provide your file to {{config.botname}}:</label>
+        <input type="file" value="{{config.input}}" id="input" name="file" class="form-control" />
+    </div>
+    <div><input type="submit" value = "Translate" class="btn btn-primary"></div>
+    </form>
+
+</div>
+{% endblock %}
